@@ -3,6 +3,8 @@ import VueRouter from 'vue-router';
 import Home from '../views/Home';
 import ResourceManage from '../views/ResourceManage';
 
+const EntInfoManage = () => import('../views/EntInfoManage.vue')
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -10,6 +12,11 @@ const routes = [
     path: '/',
     name: 'home',
     component: Home
+  },
+  {
+    path: '/entInfoManage',
+    name: 'entInfoManage',
+    component: EntInfoManage
   },
   {
     path: '/resourceManage',

@@ -42,8 +42,8 @@ export default {
           path: "resourceManage"
         },
         {
-          title: "信息管理",
-          path: "numberManage"
+          title: "企业信息管理",
+          path: "entInfoManage"
         },
         {
           title: "账号权限",
@@ -61,12 +61,17 @@ export default {
     };
   },
   created(){
-    Util.AjaxHelper({
-      url: 'resourceManage',
-      methods: 'get'
-    }).then(res=>{
-      console.log(res)
-    })
+    const data = new URLSearchParams({
+      name: '小明',
+      age: 18
+    });
+    // Util.AjaxHelper({
+    //   url: 'resourceManage',
+    //   methods: 'post',
+    //   data
+    // }).then(res=>{
+    //   console.log(res)
+    // })
   },
   methods: {
     // handleOpen(key, keyPath) {
